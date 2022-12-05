@@ -4,14 +4,14 @@
   $id = $_GET['order_id'];
   $user_id = $_SESSION['sess_id'];
 
-  $sql = "SELECT * FROM tbl_cart WHERE cart_id='$id'";
+  $sql = "SELECT * FROM tbl_cart WHERE product_id='$id' AND user_id='$user_id'";
   $result = $con->query($sql);
 
   if ($result->num_rows>0) {
     $row = $result->fetch_assoc();
     $newqty = $row['quantity']+1;
 
-    $sql2 = "UPDATE `tbl_cart` SET `quantity` = '$newqty' WHERE `cart_id` = '$id'";
+    $sql2 = "UPDATE `tbl_cart` SET `quantity` = '$newqty' WHERE `product_id` = '$id'";
     $result2 = $con->query($sql2);
 
     echo "

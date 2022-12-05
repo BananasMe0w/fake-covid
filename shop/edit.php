@@ -30,8 +30,8 @@
               <img class="d-block w-100" src="<?php echo $row['image']; ?>">
               <hr>
               <p>ยี่ห้อ : <?php echo $row['type']; ?></p>
-              <p>ราคา/กล่อง :<?php echo $row['price']; ?> </p>
-              <p>จำนวนสินค้า : <?php echo $row['amount']; ?></p>
+              <p>ราคา/กล่อง :<?php echo number_format($row['price']); ?> </p>
+              <p>จำนวนสินค้า : <?php echo number_format($row['amount']); ?></p>
               <hr>
               <a href="edit_page.php?id=<?php echo $row['id']; ?>"><button class="btn btn-info" type="button">แก้ไขข้อมูล</button></a>
               <a href="delete.php?id=<?php echo $row['id']; ?>"><button class="btn btn-danger" type="button">ลบข้อมูล</button></a>

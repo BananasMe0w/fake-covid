@@ -35,6 +35,7 @@
             <td><?php echo $row2['name']; ?></td>
             <td><img class="d-block w-50" src="<?php echo $row2['image']; ?>"></td>
             <td>
+              <a href="sub_qty.php?add_id=<?php echo $row['cart_id']; ?>"><button class="btn" type="button"><</button></a>
               <?php echo $row['quantity']; ?>
               <a href="add_qty.php?add_id=<?php echo $row['cart_id']; ?>"><button class="btn" type="button">></button></a>
             </td>
